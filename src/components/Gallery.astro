@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import gallery1 from "../images/gallery/IMG_0543.jpg";
-import gallery2 from "../images/gallery/image02.jpg";
-import gallery3 from "../images/gallery/image03.jpg";
-import gallery4 from "../images/gallery/IMG_0630.jpg";
-import gallery5 from "../images/gallery/IMG_0576.jpg";
-import gallery6 from "../images/gallery/IMG_0583.jpg";
+// import gallery1 from "../images/gallery/IMG_0543.jpg";
+// import gallery2 from "../images/gallery/image02.jpg";
+// import gallery3 from "../images/gallery/image03.jpg";
+// import gallery4 from "../images/gallery/IMG_0630.jpg";
+// import gallery5 from "../images/gallery/IMG_0576.jpg";
+// import gallery6 from "../images/gallery/IMG_0583.jpg";
 // import Swiper and modules styles
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -13,54 +13,55 @@ import "swiper/scss/pagination";
 import "../styles/my-swiper-styles.scss";
 
 // Define the gallery images with their metadata
-const galleryImages = [
-  {
-    src: gallery1,
-    alt: "Fairway bunker Hole 9 (par 4)",
-    caption: "Fairway bunker Hole 9 (par 4)",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery2,
-    alt: "Golf trip 2024 at Hidden Valley Golf Club",
-    caption: "Golf trip 2024 at Hidden Valley Golf Club",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery3,
-    alt: "Welcome back lunch February 2025",
-    caption: "Welcome back lunch February 2025",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery4,
-    alt: "Game day",
-    caption: "Game day",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery5,
-    alt: "Hole 2 (par 4)",
-    caption: "Hole 2 (par 4)",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery6,
-    alt: "Putting on Hole 6 (par 3)",
-    caption: "Putting on Hole 6 (par 3)",
-    width: 800,
-    height: 600,
-  },
-];
+// const galleryImages = [
+//   {
+//     src: gallery1,
+//     alt: "Fairway bunker Hole 9 (par 4)",
+//     caption: "Fairway bunker Hole 9 (par 4)",
+//     width: 800,
+//     height: 600,
+//   },
+//   {
+//     src: gallery2,
+//     alt: "Golf trip 2024 at Hidden Valley Golf Club",
+//     caption: "Golf trip 2024 at Hidden Valley Golf Club",
+//     width: 800,
+//     height: 600,
+//   },
+//   {
+//     src: gallery3,
+//     alt: "Welcome back lunch February 2025",
+//     caption: "Welcome back lunch February 2025",
+//     width: 800,
+//     height: 600,
+//   },
+//   {
+//     src: gallery4,
+//     alt: "Game day",
+//     caption: "Game day",
+//     width: 800,
+//     height: 600,
+//   },
+//   {
+//     src: gallery5,
+//     alt: "Hole 2 (par 4)",
+//     caption: "Hole 2 (par 4)",
+//     width: 800,
+//     height: 600,
+//   },
+//   {
+//     src: gallery6,
+//     alt: "Putting on Hole 6 (par 3)",
+//     caption: "Putting on Hole 6 (par 3)",
+//     width: 800,
+//     height: 600,
+//   },
+// ];
 ---
 
-<div class="gallery-container">
-  <div class="gallery">
+<article style="text-align: center">Gallery goes here</article>
+<!--<div class="gallery-container">
+ <div class="gallery">
     {
       galleryImages.map((image) => (
         <figure class="gallery-item">
@@ -76,10 +77,10 @@ const galleryImages = [
       ))
     }
   </div>
-</div>
+</div>-->
 
 <!-- Swiper Modal -->
-<dialog id="modal3" onclick="event.target === this && this.close()">
+<!--<dialog id="modal3" onclick="event.target === this && this.close()">
   <article>
     <a
       href="#"
@@ -99,16 +100,12 @@ const galleryImages = [
               </div>
             ))
           }
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </section>
-  </article>
-</dialog>
+        </div>-->
+<!-- If we need pagination -->
+<!-- <div class="swiper-pagination"></div> -->
+<!-- If we need navigation buttons -->
+<!-- <div class="swiper-button-prev"></div> -->
+<!-- <div class="swiper-button-next"></div> -->
 
 <style lang="scss">
   .gallery-container {

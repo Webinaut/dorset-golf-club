@@ -3,11 +3,10 @@ import FrontPageLayout from "../layouts/FrontPageLayout.astro";
 import Phone from "../components/MobilePhone.astro";
 import Email from "../components/Email.astro";
 import { Image } from "astro:assets";
-import FPImageStack from "../components/FPImageStack.astro";
 import fpcard1 from "../images/VGLLogo.png";
 import fpcard2 from "../images/Golf-Australia.jpg";
-import fpcard3 from "../images/RPGCLogo.png";
-const pageTitle = "Royal Park Ladies Golf Club";
+import fpcard3 from "../images/logo_maroondah.png";
+const pageTitle = "Dorset Golf Club";
 ---
 
 <FrontPageLayout pageTitle={pageTitle}>
@@ -17,111 +16,175 @@ const pageTitle = "Royal Park Ladies Golf Club";
         <div class="grid grid1">
           <div class="left-col">
             <p>
-              Royal Park Ladies Golf Club plays at Royal Park Golf Course in
-              Parkville.
+              Dorset Golf Club plays at Dorset Golf Course in Croyden. It is a
+              mixed club.
             </p>
             <p>
-              This 9 hole course is located in the beautiful parkland adjacent
-              to the Melbourne Zoo, approximately 3 kms from the CBD.
+              Professional W. J. “Bill” Britten originally formed the club when
+              Austgolf took on the running of the new course in 1984. The Lady
+              members separated subsequently and formed a mid-week ladies club,
+              also under the Austgolf umbrella.
             </p>
             <p>
-              This course is easily accessed by public transport and has ample
-              parking available.
+              The Men’s club continued until 1999 when a new structure was drawn
+              up under a steering committee chaired by Graham Morris, and so the
+              Dorset Golf Club Incorporated was formalized.
             </p>
             <p>
-              We hold weekly 18 hole and 9 hole competitions on Tuesdays from
-              February to the end of November.
-            </p>
-            <p>
-              If you enjoy playing golf, you would be most welcome to join our
-              friendly and enthusiastic ladies, who range in ages and golfing
-              ability, from recent beginners to very experienced players who are
-              willing to share their knowledge and expertise.
-            </p>
-            <p>
-              If you have questions please <a href="/contact/">CONTACT US.</a>
+              A committee was nominated and elected in November of that year.
+              The club does not discriminate on the basis of gender, physical
+              handicap, race or creed. All members have equal rights.
             </p>
           </div>
-          <div class="right-col"><FPImageStack /></div>
         </div>
-      </article>
-      <article>
-        <p>
-          Royal Park Ladies Golf Club acknowledges the traditional owners of the
-          land on which our golf course is located, the Wurundjeri people of the
-          Kulin nation. We pay our respects to their Elders, past, present and
-          emerging and welcome all aboriginal and Torres Strait islanders to our
-          club.
-        </p>
-      </article>
-      <article>
-        <h2 style="text-align:center">Links</h2>
-        <div class="container grid">
-          <article class="fp">
-            <h3>Victorian Golf League</h3>
-            <p>
-              Victorian Golf League website <a href="https://www.vgl.golf/"
-                >link.</a
-              >
-            </p>
-            <a href="https://www.vgl.golf/">
-              <Image src={fpcard1} alt="VGL" />
-            </a>
-          </article>
-          <article class="fp">
-            <h3>Golflink</h3>
-            <p>
-              Check your handicap here. <a
-                href="https://www.golf.org.au/handicap/">Golflink</a
-              >
-            </p>
-            <a href="https://www.golf.org.au/handicap/">
-              <Image src={fpcard2} alt="Golflink" />
-            </a>
-          </article>
+        <article>
+          <h2 style="text-align:center">Links</h2>
+          <div class="container grid">
+            <article class="fp">
+              <a href="https://www.vgl.golf/">
+                <Image src={fpcard1} alt="VGL" />
+              </a>
+              <div class="back-top">
+                <h3>Victorian Golf League</h3>
+              </div>
+              <div class="back-bottom">
+                <p>
+                  Victorian Golf League website<br /><a
+                    href="https://www.vgl.golf/"
+                    >link<svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+            </article>
 
-          <article class="fp">
-            <h3>Royal Park Golf Course</h3>
-            <p>
-              Royal Park Golf Course website <a
-                href="https://royalparkgolfcourse.ymca.org.au/">link.</a
-              >
-            </p>
-            <a href="https://royalparkgolfcourse.ymca.org.au/">
-              <Image src={fpcard3} alt="RPGC Website" />
-            </a>
-          </article>
-        </div>
+            <article class="fp">
+              <a href="https://www.golf.org.au/handicap/">
+                <Image src={fpcard2} alt="Golflink" />
+              </a>
+              <div class="back-top">
+                <h3>Golflink</h3>
+              </div>
+              <div class="back-bottom">
+                <p>
+                  Check your handicap<br /><a
+                    href="https://www.golf.org.au/handicap/"
+                    >Golflink<svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg></a
+                  >
+                </p>
+              </div>
+            </article>
+            <article class="fp">
+              <div class="card-image">
+                <a
+                  href="https://www.maroondahleisure.com.au/Our-venues/Dorset-Golf"
+                >
+                  <Image src={fpcard3} alt="Dorset Golf Course Website" />
+                </a>
+              </div>
+              <div class="back-top">
+                <h3>Dorset Golf Course</h3>
+              </div>
+              <div class="back-bottom">
+                <p>
+                  Dorset Golf Course website <br /><a
+                    href="https://www.maroondahleisure.com.au/Our-venues/Dorset-Golf"
+                    >link<svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg></a
+                  >
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <style lang="scss">
+            .grid {
+              grid-template-rows: repeat(3, auto);
+              // position: relative;
+            }
+            // .fp:before {
+            //   content: "";
+            //   position: absolute;
+            //   height: 100%;
+            //   width: 100%;
+            //   bottom: 0;
+            //   left: 0;
+            //   background-color: var(--pico-primary);
+            //   opacity: 0.75;
+            //   clip-path: ellipse(98% 16em at bottom center);
+            // }
+            .fp {
+              // position: relative;
+              // background: var(--pico-primary);
+              // clip-path: ellipse(90% 20em at bottom center);
+
+              text-align: center;
+              display: grid;
+              grid-template-rows: subgrid;
+              grid-row: span 3;
+              row-gap: 0;
+              padding: 0;
+              & p,
+              & h3 {
+                color: var(--pico-primary-inverse);
+              }
+              & a {
+                align-self: center;
+                color: var(--pico-primary-focus);
+              }
+              & a:hover {
+                color: var(--pico-primary-hover);
+              }
+            }
+            a > svg {
+              width: 18px;
+              margin-left: 4px;
+              margin-top: 1px;
+            }
+            .back-top {
+              background: var(--pico-primary);
+              clip-path: ellipse(90% 120px at bottom center);
+              row-gap: 0;
+            }
+            .back-bottom {
+              background: var(--pico-primary);
+              row-gap: 0;
+            }
+            .card-image {
+              padding: 0 1em;
+              align-self: center;
+            }
+          </style>
+        </article>
       </article>
     </div>
   </div>
-
-  <style>
-    .fp {
-      text-align: center;
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 3;
-      > a {
-        align-self: center;
-      }
-    }
-    .grid {
-      grid-template-rows: repeat(3, auto);
-    }
-    .grid.grid1 {
-      grid-template-columns: 40% 60%;
-    }
-    @media (max-width: 768px) {
-      .grid.grid1 {
-        grid-template-columns: 100%;
-      }
-      .right-col {
-        order: 1;
-      }
-      .left-col {
-        order: 2;
-      }
-    }
-  </style>
 </FrontPageLayout>

@@ -1,0 +1,42 @@
+/* Orange color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]),
+:host:not([data-theme="dark"]) {
+  --pico-color: #351330;
+  --pico-h1-color: #351330;
+  --pico-primary-background: #00425a;
+  --pico-text-selection-color: var(--pico-primary);
+  --pico-primary: #1f8a70;
+  --pico-primary-hover: #fc7300;
+  --pico-primary-focus: #bfdb38;
+  --pico-primary-inverse: #fff;
+  --pico-secondary: #9c9c9c;
+}
+// [data-theme="light"],
+// :root:not([data-theme="dark"]),
+// :host:not([data-theme="dark"]) {
+//   --pico-color: #1f1d42;
+//   --pico-h1-color: #1f1d42;
+//   --pico-primary-background: #1f1d42;
+//   --pico-text-selection-color: #59956f;
+//   --pico-primary: #86b971;
+//   --pico-primary-hover: #f9bf6d;
+//   --pico-primary-focus: #ffff66;
+//   --pico-primary-inverse: #fff;
+//   --pico-secondary: #9c9c9c;
+// }
+
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host:not([data-theme]) {
+    --pico-color: #373c44;
+    --pico-primary-inverse: #fff;
+  }
+}
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --pico-color: #373c44;
+  --pico-primary-inverse: #fff;
+}

@@ -20,7 +20,7 @@ const { pageTitle } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/RPLGC-Favicon-2.png" />
+    <link rel="icon" type="image" href="/DGC-icon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
@@ -29,7 +29,7 @@ const { pageTitle } = Astro.props;
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5P0H8MQSK7"
     ></script>
-    <script is:inline>
+    <!-- <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -37,8 +37,8 @@ const { pageTitle } = Astro.props;
       gtag("js", new Date());
 
       gtag("config", "G-5P0H8MQSK7");
-    </script>
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    </script> -->
+    <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
   </head>
   <body>
     <Header />
@@ -57,21 +57,6 @@ const { pageTitle } = Astro.props;
       <div class="swiper-pagination"></div>
     </div>
 
-    <!-- <div class="splide" aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {
-            FrontPagePhotos.map((FrontPagePhoto) => (
-              <li class="splide__slide">
-                <div class="splide__slide__container">
-                  <Image src={FrontPagePhoto} alt="" loading="lazy" />
-                </div>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div> -->
     <div class="container">
       <h1 style="text-align: center;">{pageTitle}</h1>
       <slot />
@@ -111,28 +96,6 @@ const { pageTitle } = Astro.props;
         },
       });
     </script>
-    <!-- <script>
-      import "@splidejs/splide/css";
-      import Splide from "@splidejs/splide";
-
-      new Splide(".splide", {
-        type: "fade",
-        rewind: true,
-        resetProgress: true,
-        pauseOnFocus: false,
-        speed: 1200,
-        autoplay: true,
-        interval: 6000,
-        pauseOnHover: false,
-        arrows: false,
-        pagination: true,
-        width: "1920px",
-        height: "500px",
-        cover: true,
-        gap: "10vw",
-        padding: 0,
-      }).mount();
-    </script> -->
   </body>
 </html>
 <style lang="scss">

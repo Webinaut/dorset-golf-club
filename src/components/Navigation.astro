@@ -8,7 +8,7 @@
       <a
         role="button"
         class="close"
-        href="https://royalparkladies.1golf.com.au/"
+        href="https://dorsetgc.1golf.com.au/"
         target="_blank">OneGolf</a
       >
     </li>
@@ -32,13 +32,70 @@
     </li>
   </ul>
 </nav>
-<style>
+<style lang="scss">
   li a {
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 0 0.8em;
+    font-weight: 400;
+    // font-family: "Montserrat", sans-serif;
   }
   nav li [role="button"] {
     margin: 0.5em 0;
-    font-size: 1.25em;
+    padding: 0.1em 0.5em;
+    font-size: 1.1em;
+    // font-weight: 600;
+    color: var(--pico-primary-inverse);
+    background-color: var(--pico-primary);
+    &:hover {
+      color: var(--pico-primary);
+      background-color: var(--pico-primary-inverse);
+    }
+  }
+  .main-nav ul li:not(:first-child) a:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--pico-primary-hover),
+      var(--pico-primary-focus)
+    );
+  }
+  .main-nav ul li a:hover:before {
+    width: 100%;
+    left: 0;
+    transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
+    -webkit-transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
+  }
+
+  .main-nav ul li:not(:first-child) a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    background: linear-gradient(
+      to right,
+      var(--pico-primary-hover),
+      var(--pico-primary-focus)
+    );
+    top: -4px;
+    transform-origin: right;
+  }
+  .main-nav ul li a:hover:after {
+    width: 100%;
+    transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
+    -webkit-transition:
+      width 0.3s ease-in-out,
+      left 0.3s ease-in-out;
   }
 </style>
