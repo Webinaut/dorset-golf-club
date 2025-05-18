@@ -4,7 +4,7 @@ import Phone from "../components/MobilePhone.astro";
 import Email from "../components/Email.astro";
 import { Image } from "astro:assets";
 import fpcard1 from "../images/VGLLogo.png";
-import fpcard2 from "../images/Golf-Australia.jpg";
+import fpcard2 from "../images/Golf-Australia.png";
 import fpcard3 from "../images/logo_maroondah.png";
 const pageTitle = "Dorset Golf Club";
 ---
@@ -45,7 +45,7 @@ const pageTitle = "Dorset Golf Club";
                 <Image src={fpcard1} alt="VGL" />
               </a>
               <div class="back-top">
-                <h3>Victorian Golf League</h3>
+                <h3>Victorian Golf<br />League</h3>
               </div>
               <div class="back-bottom">
                 <p>
@@ -94,15 +94,14 @@ const pageTitle = "Dorset Golf Club";
               </div>
             </article>
             <article class="fp">
-              <div class="card-image">
-                <a
-                  href="https://www.maroondahleisure.com.au/Our-venues/Dorset-Golf"
-                >
-                  <Image src={fpcard3} alt="Dorset Golf Course Website" />
-                </a>
-              </div>
+              <a
+                href="https://www.maroondahleisure.com.au/Our-venues/Dorset-Golf"
+              >
+                <Image src={fpcard3} alt="Dorset Golf Course Website" />
+              </a>
+
               <div class="back-top">
-                <h3>Dorset Golf Course</h3>
+                <h3>Dorset Golf<br />Course</h3>
               </div>
               <div class="back-bottom">
                 <p>
@@ -128,24 +127,9 @@ const pageTitle = "Dorset Golf Club";
           <style lang="scss">
             .grid {
               grid-template-rows: repeat(3, auto);
-              // position: relative;
             }
-            // .fp:before {
-            //   content: "";
-            //   position: absolute;
-            //   height: 100%;
-            //   width: 100%;
-            //   bottom: 0;
-            //   left: 0;
-            //   background-color: var(--pico-primary);
-            //   opacity: 0.75;
-            //   clip-path: ellipse(98% 16em at bottom center);
-            // }
-            .fp {
-              // position: relative;
-              // background: var(--pico-primary);
-              // clip-path: ellipse(90% 20em at bottom center);
 
+            .fp {
               text-align: center;
               display: grid;
               grid-template-rows: subgrid;
@@ -163,6 +147,9 @@ const pageTitle = "Dorset Golf Club";
               & a:hover {
                 color: var(--pico-primary-hover);
               }
+              & img {
+                padding: 1em;
+              }
             }
             a > svg {
               width: 18px;
@@ -173,14 +160,11 @@ const pageTitle = "Dorset Golf Club";
               background: var(--pico-primary);
               clip-path: ellipse(90% 120px at bottom center);
               row-gap: 0;
+              min-height: 8em;
             }
             .back-bottom {
               background: var(--pico-primary);
               row-gap: 0;
-            }
-            .card-image {
-              padding: 0 1em;
-              align-self: center;
             }
           </style>
         </article>

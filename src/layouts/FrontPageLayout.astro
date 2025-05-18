@@ -27,9 +27,10 @@ const { pageTitle } = Astro.props;
 
     <title>{pageTitle}</title>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5P0H8MQSK7"
-    ></script>
-    <!-- <script is:inline>
+    <!-- <head async src="https://www.googletagmanager.com/gtag/js?id=G-5P0H8MQSK7" -->
+    ></head
+  >
+  <!-- <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -38,8 +39,8 @@ const { pageTitle } = Astro.props;
 
       gtag("config", "G-5P0H8MQSK7");
     </script> -->
-    <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
-  </head>
+  <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
+
   <body>
     <Header />
 
@@ -122,24 +123,6 @@ const { pageTitle } = Astro.props;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
   }
 
-  // .splide {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  // }
-  // .splide__slide::after {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  // }
-  // .splide__pagination__page {
-  //   height: 3em;
-  // }
   .container {
     margin-top: 450px;
   }

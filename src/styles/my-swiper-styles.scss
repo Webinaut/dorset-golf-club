@@ -1,10 +1,10 @@
 :root {
-  --swiper-theme-color: var(--pico-primary);
+  --swiper-theme-color: var(--pico-primary-focus);
 }
 
 .swiper-pagination-bullet {
   opacity: 100%;
-  background-color: var(--pico-primary-hover);
+  background-color: var(--pico-primary);
 }
 
 .swiper-pagination-bullet-active {
