@@ -93,16 +93,16 @@ ul {
 }
 
 // Splide Pagination Styles
-button[role="tab"] {
-  padding: 0.3em;
-  background-color: var(--pico-color);
-  border-radius: 50%;
-  border: none;
-  margin: 0.5em;
-  &.is-active {
-    background-color: var(--pico-primary);
-  }
-}
+// button[role="tab"] {
+//   padding: 0.3em;
+//   background-color: var(--pico-color);
+//   border-radius: 50%;
+//   border: none;
+//   margin: 0.5em;
+//   &.is-active {
+//     background-color: var(--pico-primary);
+//   }
+// }
 // Astro Styles
 .container-fluid {
   display: flex;
@@ -133,23 +133,6 @@ button[role="tab"] {
   color: var(--pico-primary-hover);
 }
 
-// .main-nav ul li:not(:first-child) a:before {
-//   content: "";
-//   position: absolute;
-//   width: 0%;
-//   height: 2px;
-//   bottom: -1px;
-//   left: 50%;
-//   background-color: var(--pico-primary-hover);
-// }
-
-// .main-nav ul li a:hover:before {
-//   width: 100%;
-//   left: 0;
-//   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-//   -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-// }
-
 .container-fluid nav ul li {
   padding: 0 10px;
 }
@@ -158,6 +141,13 @@ button[role="tab"] {
 }
 .logo .active {
   border-bottom: none;
+}
+/* Checkbox */
+.main-nav input[type="checkbox"] {
+  display: none;
+}
+.sub-menu {
+  display: none;
 }
 @media only screen and (min-width: 769px) {
   nav > ul > li > a,
@@ -174,6 +164,35 @@ button[role="tab"] {
     display: flex;
     justify-content: flex-start;
     width: 12%;
+  }
+  .sub-menu {
+    position: absolute;
+    background: var(--pico-primary-inverse);
+    padding: 0.5em;
+    border: var(--pico-primary-hover) solid 2px;
+    // border-image-source: linear-gradient(
+    //   to right,
+    //   var(--pico-primary-hover),
+    //   var(--pico-primary-focus)
+    // );
+    border-width: 2px 0 0 0;
+    // border-left: 0;
+    // border-right: 0;
+    // border-bottom: 0;
+    box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav .sub-menu > li > a:not(.active) {
+    color: var(--pico-submenu-color);
+  }
+
+  .main-nav li:has(label:hover) .sub-menu.martin,
+  .sub-menu.martin:hover {
+    display: block;
+  }
+
+  .main-nav .sub-menu.martin li a:hover {
+    color: var(--pico-primary-hover);
   }
   .hamburger {
     display: none;
@@ -230,9 +249,9 @@ button[role="tab"] {
     display: none;
   }
   .main-nav.expanded {
-    z-index: 1;
+    z-index: 999;
     padding: 0.5em;
-    border: solid var(--pico-primary-focus);
+    border: solid var(--pico-primary-hover);
     border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
     display: block;
@@ -245,25 +264,27 @@ button[role="tab"] {
   }
 
   /* Menu */
-  .main-nav ul li a {
-    color: var(--pico-primary-background);
-  }
-  nav li:first-child a {
-    color: var(--pico-primary-inverse);
-  }
-  .main-nav ul li a.active {
-    color: var(--pico-primary);
-  }
   nav li :where(a, [role="link"]):not(:hover),
   label {
-    color: var(--pico-color);
+    color: var(--pico-submenu-color);
   }
-  .main-nav ul li a:before {
-    background-color: var(--pico-primary-focus);
+  nav li a.active {
+    color: var(--pico-primary);
   }
-  .main-nav ul li:not(:first-child) label.drop-icon:hover,
-  .main-nav ul li:not(:first-child) a:hover {
-    position: relative;
-    cursor: pointer;
+  /* Dropdown Styles */
+  .main-nav .sub-menu.martin,
+  .main-nav .sub-menu.dev {
+    display: none;
+  }
+  .main-nav:has(input#sm1[type="checkbox"]:checked) .sub-menu.martin {
+    display: block;
+    // color: var(--pico-primary-inverse);
+    // background-color: var(--pico-primary-hover-background);
+    width: fit-content;
+    margin: 1em 0;
+  }
+
+  .main-nav li label.drop-icon {
+    display: inline-block;
   }
 }

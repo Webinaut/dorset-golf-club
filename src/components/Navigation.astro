@@ -1,5 +1,5 @@
 ---
-
+import DownIcon from "./QuillInlineDown.astro";
 ---
 
 <nav class="main-nav">
@@ -19,13 +19,22 @@
       <a href="/about/">ABOUT US</a>
     </li>
     <li>
-      <a href="/membership/">MEMBERSHIP</a>
-    </li>
-    <li>
-      <a href="/syllabus/">SYLLABUS</a>
-    </li>
-    <li>
       <a href="/gallery/">GALLERY</a>
+    </li>
+    <li>
+      <a href="#">
+        <label for="sm1" title="Open Sub-menu" class="drop-icon"
+          >MEMBER <DownIcon />
+        </label>
+      </a>
+      <input type="checkbox" class="dropdown" id="sm1" />
+      <aside>
+        <ul class="sub-menu martin">
+          <li><a href="/membership/">Membership</a></li>
+          <li><a href="/syllabus/">Syllabus</a></li>
+          <li><a href="/honour-boards/">Honour Boards</a></li>
+        </ul>
+      </aside>
     </li>
     <li>
       <a href="/contact/">CONTACT US</a>
@@ -37,13 +46,11 @@
     font-size: 0.8em;
     padding: 0 0.8em;
     font-weight: 400;
-    // font-family: "Montserrat", sans-serif;
   }
   nav li [role="button"] {
     margin: 0.5em 0;
     padding: 0.1em 0.5em;
     font-size: 1.1em;
-    // font-weight: 600;
     color: var(--pico-primary-inverse);
     background-color: var(--pico-primary);
     &:hover {
@@ -51,7 +58,7 @@
       background-color: var(--pico-primary-inverse);
     }
   }
-  .main-nav ul li:not(:first-child) a:before {
+  .main-nav ul li:not(:first-child)a:before {
     content: "";
     position: absolute;
     width: 0%;
@@ -86,7 +93,7 @@
       var(--pico-primary-hover),
       var(--pico-primary-focus)
     );
-    top: -5px;
+    top: -4px;
     transform-origin: right;
   }
   .main-nav ul li a:hover:after {
@@ -97,5 +104,9 @@
     -webkit-transition:
       width 0.3s ease-in-out,
       left 0.3s ease-in-out;
+  }
+  .martin li {
+    color: var(--pico-primary-background);
+    padding-top: 0.2em;
   }
 </style>
