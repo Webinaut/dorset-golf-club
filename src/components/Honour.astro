@@ -72,10 +72,10 @@ const pageTitle = "Honour Boards";
     //   disableOnInteraction: false,
     // },
     // If we need pagination
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
     // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
@@ -99,5 +99,8 @@ const pageTitle = "Honour Boards";
   .swiper-button-next,
   .swiper-button-prev {
     color: var(--pico-primary);
+  }
+  .swiper-pagination-fraction {
+    color: var(--pico-primary-hover);
   }
 </style>

@@ -11,5 +11,12 @@ const currentURL = window.location.href;
 navLinks.forEach((link) => {
   if (link.href === currentURL) {
     link.classList.add("active");
+    // Highlight Sub-menu Label if Sub-Menu Active
+    if (link.closest("ul").classList.contains("sub-menu")) {
+      link
+        .closest("aside")
+        .parentElement.querySelector(".drop-icon")
+        .classList.add("active");
+    }
   }
 });
