@@ -158,7 +158,7 @@ ul {
     position: absolute;
     background: var(--pico-primary-inverse);
     padding: 0.5em;
-    border: var(--pico-primary) solid 2px;
+    border: solid var(--pico-primary);
     border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
   }
@@ -170,6 +170,7 @@ ul {
   .main-nav li:has(label:hover) .sub-menu.martin,
   .sub-menu.martin:hover {
     display: block;
+    z-index: 999;
   }
   .main-nav .sub-menu.martin li a:hover {
     color: var(--pico-primary-hover);
