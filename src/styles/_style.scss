@@ -114,13 +114,22 @@ ul {
     overflow: hidden;
   }
 }
-
-.main-nav ul li:not(:first-child) label.drop-icon:hover,
-.main-nav ul li:not(:first-child) a:hover {
-  position: relative;
+nav li,
+.drop-icon {
+  margin: 0;
+  padding: 0;
+}
+.main-nav li label.drop-icon:hover,
+.main-nav li a:hover {
   cursor: pointer;
   color: var(--pico-primary-hover);
 }
+// .main-nav ul li:not(:first-child) label.drop-icon:hover,
+// .main-nav ul li:not(:first-child) a:hover {
+//   position: relative;
+//   cursor: pointer;
+//   color: var(--pico-primary-hover);
+// }
 
 .container-fluid nav ul li {
   padding: 0 10px;
@@ -228,15 +237,16 @@ ul {
   .main-nav {
     display: none;
   }
+
   .main-nav.expanded {
     z-index: 999;
     padding: 0.5em;
-    border: solid var(--pico-primary-hover);
-    border-width: 2px 0 0 0;
+    // border: solid var(--pico-primary-hover);
+    // border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
     display: block;
     position: absolute;
-    top: 100px;
+    top: 75px;
     right: 5%;
     > ul {
       padding: 0.5em;
@@ -252,8 +262,7 @@ ul {
     color: var(--pico-primary);
   }
   /* Dropdown Styles */
-  .main-nav .sub-menu.martin,
-  .main-nav .sub-menu.dev {
+  .main-nav .sub-menu.martin {
     display: none;
   }
   .main-nav:has(input#sm1[type="checkbox"]:checked) .sub-menu.martin {
