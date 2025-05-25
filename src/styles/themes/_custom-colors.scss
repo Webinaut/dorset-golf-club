@@ -33,10 +33,18 @@
   :host:not([data-theme]) {
     --pico-color: #373c44;
     --pico-primary-inverse: #fff;
+    --pico-h1-color: var(--pico-primary-inverse);
+  }
+  .fp {
+    background-color: var(--pico-primary-inverse);
   }
 }
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
   --pico-color: #373c44;
   --pico-primary-inverse: #fff;
+  --pico-h1-color: var(--pico-primary-inverse);
+  .fp {
+    background-color: var(--pico-primary-inverse);
+  }
 }

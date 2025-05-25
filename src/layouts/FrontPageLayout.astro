@@ -27,10 +27,9 @@ const { pageTitle } = Astro.props;
 
     <title>{pageTitle}</title>
     <!-- Google tag (gtag.js) -->
-    <!-- <head async src="https://www.googletagmanager.com/gtag/js?id=G-5P0H8MQSK7" -->
-    ></head
-  >
-  <!-- <script is:inline>
+    <!-- <head async src="https://www.googletagmanager.com/gtag/js?id=G-5P0H8MQSK7">
+    </head>-->
+    <!-- <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -38,12 +37,11 @@ const { pageTitle } = Astro.props;
       gtag("js", new Date());
 
       gtag("config", "G-5P0H8MQSK7");
-    </script> -->
-  <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
-
+    </script>
+<link rel="sitemap" href="/sitemap-index.xml" /> -->
+  </head>
   <body>
     <Header />
-
     <div class="swiper">
       <div class="swiper-wrapper">
         {
