@@ -101,7 +101,7 @@ ul {
   padding: 20px;
 }
 .main-nav {
-  // max-height: 160px;
+  max-height: 160px;
   & img {
     max-height: 160px;
     object-fit: contain;
@@ -110,26 +110,17 @@ ul {
   }
   & li {
     font-size: 1.2em;
-    padding: 1em;
+    padding: 2em 1em;
     overflow: hidden;
   }
 }
-nav li,
-.drop-icon {
-  margin: 0;
-  padding: 0;
-}
-.main-nav li label.drop-icon:hover,
-.main-nav li a:hover {
+
+.main-nav ul li:not(:first-child) label.drop-icon:hover,
+.main-nav ul li:not(:first-child) a:hover {
+  position: relative;
   cursor: pointer;
   color: var(--pico-primary-hover);
 }
-// .main-nav ul li:not(:first-child) label.drop-icon:hover,
-// .main-nav ul li:not(:first-child) a:hover {
-//   position: relative;
-//   cursor: pointer;
-//   color: var(--pico-primary-hover);
-// }
 
 .container-fluid nav ul li {
   padding: 0 10px;
@@ -146,7 +137,6 @@ nav li,
 }
 .sub-menu {
   display: none;
-  z-index: 999;
 }
 @media only screen and (min-width: 769px) {
   nav > ul > li > a,
@@ -168,7 +158,7 @@ nav li,
     position: absolute;
     background: var(--pico-primary-inverse);
     padding: 0.5em;
-    border: solid var(--pico-primary-hover);
+    border: solid var(--pico-primary);
     border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
   }
@@ -179,7 +169,8 @@ nav li,
 
   .main-nav li:has(label:hover) .sub-menu.martin,
   .sub-menu.martin:hover {
-    display: unset;
+    display: block;
+    z-index: 999;
   }
   .main-nav .sub-menu.martin li a:hover {
     color: var(--pico-primary-hover);
@@ -237,16 +228,15 @@ nav li,
   .main-nav {
     display: none;
   }
-
   .main-nav.expanded {
     z-index: 999;
     padding: 0.5em;
-    // border: solid var(--pico-primary-hover);
-    // border-width: 2px 0 0 0;
+    border: solid var(--pico-primary-hover);
+    border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
     display: block;
     position: absolute;
-    top: 75px;
+    top: 100px;
     right: 5%;
     > ul {
       padding: 0.5em;
@@ -262,7 +252,8 @@ nav li,
     color: var(--pico-primary);
   }
   /* Dropdown Styles */
-  .main-nav .sub-menu.martin {
+  .main-nav .sub-menu.martin,
+  .main-nav .sub-menu.dev {
     display: none;
   }
   .main-nav:has(input#sm1[type="checkbox"]:checked) .sub-menu.martin {
