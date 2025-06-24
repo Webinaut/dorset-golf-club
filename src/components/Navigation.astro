@@ -19,17 +19,28 @@ import DownIcon from "./QuillInlineDown.astro";
       <a href="/about/">ABOUT US</a>
     </li>
     <li>
-      <a href="/gallery/">GALLERY</a>
-    </li>
-    <li>
       <a href="#">
         <label for="sm1" title="Open Sub-menu" class="drop-icon"
-          >MEMBER <DownIcon />
+          >GALLERIES <DownIcon />
         </label>
       </a>
       <input type="checkbox" class="dropdown" id="sm1" />
       <aside>
-        <ul class="sub-menu martin">
+        <ul class="sub-menu galleries">
+          <li><a href="/2025gallery/">2025 Gallery</a></li>
+          <li><a href="/2024gallery/">2024 Gallery</a></li>
+        </ul>
+      </aside>
+    </li>
+    <li>
+      <a href="#">
+        <label for="sm2" title="Open Sub-menu" class="drop-icon"
+          >MEMBER <DownIcon />
+        </label>
+      </a>
+      <input type="checkbox" class="dropdown" id="sm2" />
+      <aside>
+        <ul class="sub-menu member">
           <li><a href="/membership/">Membership</a></li>
           <li><a href="/syllabus/">Syllabus</a></li>
           <li><a href="/honour-boards/">Honour Boards</a></li>
@@ -42,71 +53,21 @@ import DownIcon from "./QuillInlineDown.astro";
   </ul>
 </nav>
 <style lang="scss">
-  li a {
-    font-size: 0.8em;
-    padding: 0 0.8em;
-    font-weight: 400;
-  }
+  // li a {
+  //   font-size: 0.8em;
+  //   padding: 0 0.8em;
+  //   font-weight: 400;
+  // }
   nav li [role="button"] {
     margin: 0.5em 0;
     padding: 0.1em 0.5em;
-    font-size: 1.1em;
+    font-size: 1.5em;
+    font-weight: 400;
     color: var(--pico-primary-inverse);
     background-color: var(--pico-primary);
     &:hover {
       color: var(--pico-primary);
       background-color: var(--pico-primary-inverse);
     }
-  }
-  // .main-nav ul li:not(:first-child)a:before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 0%;
-  //   height: 2px;
-  //   bottom: -2px;
-  //   left: 0;
-  //   background: linear-gradient(
-  //     to right,
-  //     var(--pico-primary-hover),
-  //     var(--pico-primary-focus)
-  //   );
-  // }
-  // .main-nav ul li a:hover:before {
-  //   width: 100%;
-  //   left: 0;
-  //   transition:
-  //     width 0.3s ease-in-out,
-  //     left 0.3s ease-in-out;
-  //   -webkit-transition:
-  //     width 0.3s ease-in-out,
-  //     left 0.3s ease-in-out;
-  // }
-
-  // .main-nav ul li:not(:first-child) a:after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 0%;
-  //   height: 2px;
-  //   right: 0;
-  //   background: linear-gradient(
-  //     to right,
-  //     var(--pico-primary-hover),
-  //     var(--pico-primary-focus)
-  //   );
-  //   top: -4px;
-  //   transform-origin: right;
-  // }
-  // .main-nav ul li a:hover:after {
-  //   width: 100%;
-  //   transition:
-  //     width 0.3s ease-in-out,
-  //     left 0.3s ease-in-out;
-  //   -webkit-transition:
-  //     width 0.3s ease-in-out,
-  //     left 0.3s ease-in-out;
-  // }
-  .martin li {
-    color: var(--pico-primary-background);
-    padding-top: 0.2em;
   }
 </style>

@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PhotoGallery2025 from "../components/2025Gallery.astro";
+// import PhotoGallery2024 from "../components/2024Gallery.astro";
+
+const pageTitle = "2025 Photo Gallery";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>
+        These photo galleries capture the spirit of our members, from friendly
+        competitions to social gatherings. <b
+          >Click on a photo to open a slideshow.</b
+        >
+      </p>
+      <!-- <Tabtabs tabs={sampleTabs} defaultTab="2025" /> -->
+      <PhotoGallery2025 />
+      <!-- <PhotoGallery2024 /> -->
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  .tabs {
+    display: flex;
+  }
+
+  .tabs section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .tabs figure {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    // display: none;
+  }
+
+  .tabs [type="radio"]:checked + figure {
+    display: block;
+  }
+
+  nav.tab-control label.active {
+    color: var(--primary);
+    cursor: pointer;
+  }
+</style>
