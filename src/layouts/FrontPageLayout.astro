@@ -1,5 +1,6 @@
 ---
 import "../styles/global.scss";
+import Hello from "../components/Hello.astro";
 import Header from "../components/FrontPageHeader.astro";
 import { Image } from "astro:assets";
 // import Swiper and modules styles
@@ -40,7 +41,9 @@ const { pageTitle } = Astro.props;
     </script>
 <link rel="sitemap" href="/sitemap-index.xml" /> -->
   </head>
+
   <body>
+    <Hello />
     <Header />
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -96,32 +99,34 @@ const { pageTitle } = Astro.props;
       });
     </script>
   </body>
-</html>
-<style lang="scss">
-  .swiper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-  }
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .swiper-slide::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-  }
 
-  .container {
-    margin-top: 450px;
-  }
-</style>
+  <style lang="scss">
+    .swiper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 500px;
+      z-index: -1;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-slide::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    }
+
+    .container {
+      margin-top: 450px;
+    }
+  </style>
+</html>

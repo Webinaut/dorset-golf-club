@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PhotoGallery2025 from "../components/2025Gallery.astro";
+import PhotoGallery2024 from "../components/2024Gallery.astro";
+
+const pageTitle = "Photo Galleries";
+---
+
+<Layout pageTitle={pageTitle}>
+  <div class="container">
+    <article>
+      <p>
+        These photo galleries capture the spirit of our members, from friendly
+        competitions to social gatherings. <b
+          >Click on a photo to open a slideshow.</b
+        >
+      </p>
+      <nav class="tab-control">
+        <ul>
+          <li>
+            <button class="outline"><label for="tab1">2025</label></button>
+          </li>
+          <li>
+            <button class="outline"><label for="tab2">2024</label></button>
+          </li>
+        </ul>
+      </nav>
+      <div class="tabs">
+        <section>
+          <input
+            hidden="hidden"
+            type="radio"
+            name="tabs"
+            id="tab1"
+            checked="checked"
+          />
+          <figure>
+            <PhotoGallery2025 />
+          </figure>
+
+          <input hidden="hidden" type="radio" name="tabs" id="tab2" />
+
+          <figure>
+            <PhotoGallery2024 />
+          </figure>
+        </section>
+      </div>
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  button.outline {
+    margin-right: 1em;
+    padding: 0.5em 1em;
+  }
+  .tabs {
+    display: flex;
+  }
+
+  .tabs section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .tabs figure {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .tabs [type="radio"]:checked + figure {
+    display: block;
+  }
+
+  .tab-control label {
+    // color: var(--pico-color);
+    // cursor: pointer;
+    margin-bottom: 0;
+    &.active {
+      // color: var(--pico-primary);
+    }
+    &:hover {
+      // color: var(--pico-primary-hover);
+      cursor: pointer;
+    }
+  }
+  nav ul:first-of-type {
+    margin-left: 0;
+  }
+</style>
+<script>
+  const nodeList = document.querySelectorAll(".tab-control label");
+  const eventListenerCallback = setActiveState.bind(null, nodeList);
+
+  nodeList[0].classList.add("active"); /** add active class to first node  */
+
+  nodeList.forEach((node) => {
+    node.addEventListener(
+      "click",
+      eventListenerCallback
+    ); /** add click event listener to all nodes */
+  });
+
+  /** the click handler */
+  function setActiveState(nodeList, event) {
+    nodeList.forEach((node) => {
+      node.classList.remove("active"); /** remove active class from all nodes */
+    });
+    event.target.classList.add("active"); /* set active class on current node */
+  }
+</script>

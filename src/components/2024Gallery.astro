@@ -82,7 +82,7 @@ const galleryImages = [
     >
     </a>
     <section>
-      <div class="swiper">
+      <div class="swiper-2024">
         <div class="swiper-wrapper">
           {
             galleryImages.map((image) => (
@@ -223,7 +223,7 @@ const galleryImages = [
           import { Navigation, Pagination } from "swiper/modules";
 
           // init Swiper:
-          const swiper = new Swiper(".swiper", {
+          const swiper2024 = new Swiper(".swiper-2024", {
             // configure Swiper to use modules
             modules: [Navigation, Pagination],
 
@@ -255,11 +255,11 @@ const galleryImages = [
             imag.addEventListener("click", () => {
               (dialog as HTMLDialogElement).showModal();
               (dialog as HTMLDialogElement).inert = false;
-              swiper.slideTo(index);
+              swiper2024.slideTo(index);
             });
           });
           (dialog as HTMLDialogElement).addEventListener("close", function () {
-            swiper.slideTo(1);
+            swiper2024.slideTo(1);
           });
         </script>
       </div>
