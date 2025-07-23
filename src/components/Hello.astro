@@ -64,9 +64,10 @@ import QuillInlineDown from "./QuillInlineDown.astro";
     top: 0;
     right: 0.5em;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
     min-width: 9px;
     min-height: 17px;
+    max-height: 4em;
     opacity: 1;
     cursor: pointer;
     padding: 0.3em;
@@ -106,7 +107,7 @@ import QuillInlineDown from "./QuillInlineDown.astro";
   }
 </style>
 <script>
-  // Toggle Hamburger Menu
+  // Toggle Hellobar
   document.querySelector(".hellobar-toggle").addEventListener("click", () => {
     document.querySelector(".hellobar-esc").classList.toggle("show");
     document.querySelector(".hellobar-down").classList.toggle("show");
