@@ -62,7 +62,7 @@ const galleryImages = [
             alt={image.alt}
             width={image.width}
             height={image.height}
-            class="gallery-image"
+            class="gallery-image-2024"
           />
           <figcaption>{image.caption}</figcaption>
         </figure>
@@ -72,17 +72,17 @@ const galleryImages = [
 </div>
 
 <!-- Swiper Modal -->
-<dialog id="modal2" onclick="Event.target === this && this.close()">
+<dialog id="modal2024" onclick="Event.target === this && this.close()">
   <article>
     <a
       href="#"
       rel="prev"
-      class="close"
+      class="close2024"
       onclick="this.closest('dialog').close()"
     >
     </a>
     <section>
-      <div class="swiper-2024">
+      <div class="swiper swiper-2024">
         <div class="swiper-wrapper">
           {
             galleryImages.map((image) => (
@@ -94,7 +94,7 @@ const galleryImages = [
           }
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination-2024"></div>
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -134,7 +134,7 @@ const galleryImages = [
             cursor: pointer;
           }
 
-          .gallery-image {
+          .gallery-image-2024 {
             width: 100%;
             height: auto;
             object-fit: contain;
@@ -209,7 +209,7 @@ const galleryImages = [
           dialog[open] article {
             transform: scale(1);
           }
-          .close {
+          .close2024 {
             margin-top: calc(var(--pico-spacing) * -0.5);
             width: 2rem;
             height: 2rem;
@@ -237,7 +237,7 @@ const galleryImages = [
 
             // If we need pagination
             pagination: {
-              el: ".swiper-pagination",
+              el: ".swiper-pagination-2024",
               type: "bullets",
             },
 
@@ -248,8 +248,8 @@ const galleryImages = [
             },
           });
 
-          const images = document.querySelectorAll("img.gallery-image");
-          const dialog = document.getElementById("modal2");
+          const images = document.querySelectorAll("img.gallery-image-2024");
+          const dialog = document.getElementById("modal2024");
           (dialog as HTMLDialogElement).inert = true;
           images.forEach(function (imag, index) {
             imag.addEventListener("click", () => {
@@ -258,9 +258,12 @@ const galleryImages = [
               swiper2024.slideTo(index);
             });
           });
-          (dialog as HTMLDialogElement).addEventListener("close", function () {
-            swiper2024.slideTo(1);
-          });
+          (dialog as HTMLDialogElement).addEventListener(
+            "close2024",
+            function () {
+              swiper2024.slideTo(1);
+            }
+          );
         </script>
       </div>
     </section>
