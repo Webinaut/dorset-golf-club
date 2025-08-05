@@ -50,7 +50,7 @@ const pageTitle = "Photo Galleries";
 </Layout>
 <style lang="scss">
   button.outline {
-    margin-right: 1em;
+    margin: 0.5em;
     padding: 0.5em 1em;
   }
   .tabs {
@@ -93,8 +93,14 @@ const pageTitle = "Photo Galleries";
     margin-left: 0;
   }
   @media only screen and (max-width: 768px) {
+    .tab-control > ul {
+      display: flex;
+      flex-direction: row;
+    }
     .tab-control > ul,
     .tab-control > ul > li {
+      justify-content: center;
+
       background-color: var(--pico-background-color);
     }
   }
