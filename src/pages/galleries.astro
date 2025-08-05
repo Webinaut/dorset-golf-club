@@ -75,6 +75,7 @@ const pageTitle = "Photo Galleries";
   }
   .tab-control {
     justify-content: center;
+    background-color: var(--pico-background-color) !important;
   }
   .tab-control label {
     color: var(--pico-primary-inverse);
@@ -90,6 +91,12 @@ const pageTitle = "Photo Galleries";
   }
   nav ul:first-of-type {
     margin-left: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    .tab-control > ul,
+    .tab-control > ul > li {
+      background-color: var(--pico-background-color);
+    }
   }
 </style>
 <script>
