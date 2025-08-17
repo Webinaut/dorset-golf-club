@@ -1,61 +1,32 @@
 ---
 import { Image } from "astro:assets";
-import gallery1 from "../images/2024/2024 Captains Trophy - Kath, Hel, Helga & Barb.jpg";
-import gallery2 from "../images/2024/2024 Fellas lunch.jpg";
-import gallery3 from "../images/2024/2024 Merimbula trip.jpg";
-import gallery4 from "../images/2024/2024 Mixed Foursomes Champions Mitch & Jenny.jpg";
-import gallery5 from "../images/2024/2024 Tamati HIO 8th.jpg";
+import galleryImages2024 from "../data/galleryphotos2024.json";
+interface ImageData2024 {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}
+const images2024: ImageData2024[] = galleryImages2024;
+
+// import gallery1 from "../images/2024/2024 Captains Trophy - Kath, Hel, Helga & Barb.jpg";
+// import gallery2 from "../images/2024/2024 Fellas lunch.jpg";
+// import gallery3 from "../images/2024/2024 Merimbula trip.jpg";
+// import gallery4 from "../images/2024/2024 Mixed Foursomes Champions Mitch & Jenny.jpg";
+// import gallery5 from "../images/2024/2024 Tamati HIO 8th.jpg";
 
 // import Swiper and modules styles
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "../styles/my-swiper-styles.scss";
-
-// Define the gallery images with their metadata
-const galleryImages = [
-  {
-    src: gallery1,
-    alt: "Captains Trophy - Kathy, Hel, Helga & Barb",
-    caption: "Captains Trophy - Kathy, Hel, Helga & Barb",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery2,
-    alt: "Fellas Christmas Lunch",
-    caption: "Fellas Christmas Lunch",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery3,
-    alt: "Members Merrimbula Trip",
-    caption: "Members Merrimbula Trip",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery4,
-    alt: "Mitch & Jenny - Mixed Foursomes Champions",
-    caption: "Mitch & Jenny - Mixed Foursomes Champions",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: gallery5,
-    alt: "Tamati - Hole In One 8th",
-    caption: "Tamati - Hole In One 8th",
-    width: 800,
-    height: 600,
-  },
-];
 ---
 
 <div class="gallery-container">
   <div class="gallery">
     {
-      galleryImages.map((image) => (
+      images2024.map((image) => (
         <figure class="gallery-item">
           <Image
             src={image.src}
@@ -85,9 +56,14 @@ const galleryImages = [
       <div class="swiper swiper-2024">
         <div class="swiper-wrapper">
           {
-            galleryImages.map((image) => (
+            images2024.map((image) => (
               <div class="swiper-slide">
-                <Image src={image.src} alt="" loading="lazy" />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                />
                 <p class="caption">{image.caption}</p>
               </div>
             ))
