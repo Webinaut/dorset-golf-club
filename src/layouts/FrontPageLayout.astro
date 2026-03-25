@@ -9,12 +9,11 @@ import "swiper/scss/pagination";
 import "swiper/scss/autoplay";
 import "swiper/scss/effect-fade";
 import "../styles/my-swiper-styles.scss";
-const FrontPagePhotos = await Astro.glob("../images/front-page/*.jpg").then(
-  (files) => {
-    return files.map((file) => file.default);
-  }
-);
 import Footer from "../components/Footer.astro";
+const FrontPagePhotos = import.meta.glob<{ default: ImageMetadata }>(
+  "../images/front-page/*.{jpeg,jpg,png,webp}",
+);
+const HeroPhotos = Object.values(FrontPagePhotos);
 const { pageTitle } = Astro.props;
 ---
 
@@ -48,9 +47,9 @@ const { pageTitle } = Astro.props;
     <div class="swiper">
       <div class="swiper-wrapper">
         {
-          FrontPagePhotos.map((FrontPagePhoto) => (
+          HeroPhotos.map((image) => (
             <div class="swiper-slide">
-              <Image src={FrontPagePhoto} alt="" loading="lazy" />
+              <Image src={image()} alt="" loading="lazy" />
             </div>
           ))
         }
